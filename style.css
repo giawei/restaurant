@@ -6,8 +6,9 @@ body {
     border-radius: 5px;
     /* max-width: 600px; */
     background-color: #f9f9f9;
-    
+    box-sizing: border-box;
     justify-content: space-between; /* 左右分隔 */
+    
 }
 .search-bar-container {
     display: flex;
@@ -46,6 +47,8 @@ body {
 .main-container {
     display: flex;
     justify-content: space-between; /* 左右分佈 */
+    width: 100%;
+    
 }
 .cart-container {
     border: 2px solid #4CAF50; /* 綠色邊框 */
@@ -54,7 +57,7 @@ body {
     border-radius: 10px; /* 邊角圓滑 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
     display: inline-block; /* 讓容器根據內容自動調整大小 */
-    min-width: 400px; /* 設定最小寬度，根據需要調整 */
+    
 } 
 
 .cart-section {
@@ -75,6 +78,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     width: 400px;
+    
     background-color: #ffffff; /* 背景顏色 */
 }
 .product img {
@@ -98,12 +102,40 @@ button:hover {
 }
 
 
+/* 將產品容器的排版改為單列 */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
+    .productContainer {
+        padding: 0 10px; /* 添加左右內邊距，避免接觸邊界 */
+        grid-template-columns: 1fr; /* 單列 */
     }
-    .productContainer, .cart-container {
-        width: 100%;
+    
+    .main-container {
+        flex-direction: column; /* 垂直排列 */
+    }
+
+    .cart-container {
+        min-width: auto; /* 自動調整寬度 */
+        width: 90%; /* 全寬 */
+        position: relative;
+        margin-top: 20px; /* 上方間距 */
+    }
+
+    .site-name {
+        font-size: 20px; /* 小螢幕上減小字體大小 */
+    }
+}
+
+/* 更小螢幕時調整輸入框與按鈕的寬度 */
+@media (max-width: 480px) {
+    #searchInput {
+        width: 70%; /* 調整輸入框寬度 */
+    }
+
+    .search {
+        width: 50px; /* 調整按鈕寬度 */
+    }
+    
+    .site-name {
+        font-size: 18px; /* 更小螢幕上減小字體大小 */
     }
 }
