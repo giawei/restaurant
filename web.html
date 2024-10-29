@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雜貨店</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-bar-container">
+        <span class="site-name" >雜貨店</span> <!-- 網站名稱 -->
+        <input type="text" id="searchInput" placeholder="搜尋商品...">
+        <button class = "search"></button>
+        
+    </div>
+
+    <div class="main-container">
+        <div class="productContainer">
+            <div class="product">
+                <p>三明治</p>
+                <img src="product_images/sandwich.jpg">
+                <p>$150</p>
+                <button class="add-price" data-price="150" data-name="三明治">加入購物車</button>
+            </div>
+            <div class="product">
+                <p>獅魚</p>
+                <img src="product_images/lion_fish.jpg">
+                <p>$350</p>
+                <button class="add-price" data-price="350" data-name="獅魚">加入購物車</button>
+            </div>
+            <div class="product">
+                <p>干貝</p>
+                <img src="product_images/scallops.jpg">
+                <p>$400</p>
+                <button class="add-price" data-price="400" data-name="干貝">加入購物車</button>
+            </div>
+            <div class="product">
+                <p>鴨胸</p>
+                <img src="product_images/duck_breast.jpg">
+                <p>$900</p>
+                <button class="add-price" data-price="900" data-name="鴨胸">加入購物車</button>
+            </div>
+            <div class="product">
+                <p>法式可麗餅</p>
+                <img src="product_images/crepes.jpg">
+                <p>$200</p>
+                <button class="add-price" data-price="200" data-name="法式可麗餅">加入購物車</button>
+            </div>        
+            <div class="product">
+                <p>臘腸狗</p>
+                <img src="product_images/doooog.jpg">
+                <p>$20000</p>
+                <button class="add-price" data-price="20000" data-name="臘腸狗">加入購物車</button>
+            </div>
+
+        </div>
+        
+        <div class="cart-container"> <!-- 新增的容器 -->
+            <div class="cart-section">
+                <h2>購物車總金額：<span id="totalPrice">0</span> 元</h2>
+                <button id="clearCartButton">清空購物車</button>
+                <h3>購物車內容：</h3>
+                <div id="cartItems"></div> <!-- 顯示購物車內的商品 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

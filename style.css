@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* max-width: 600px; */
+    background-color: #f9f9f9;
+    
+    justify-content: space-between; /* 左右分隔 */
+}
+.search-bar-container {
+    display: flex;
+    background-color: #98ecc4;
+    text-align: center;
+    justify-content: center; /* 將內容置中 */
+    position: relative; /* 使其子元素可絕對定位 */
+    width: auto;
+    height: auto;
+    min-height: 35px;
+    margin: 15px 0px;
+}
+.site-name {
+    font-size: 24px; /* 設定網站名稱的字體大小 */
+    margin-right: 20px; /* 與搜尋欄之間的間距 */
+    position: absolute;
+    left:10px;    
+}
+#searchInput{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.search{
+    background-image: url('./product_images/ssss.png');
+    background-size: contain; /* 調整圖片大小 */
+    background-repeat: no-repeat;
+    background-position: center;
+    width:80px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.main-container {
+    display: flex;
+    justify-content: space-between; /* 左右分佈 */
+}
+.cart-container {
+    border: 2px solid #4CAF50; /* 綠色邊框 */
+    background-color: #e8f5e9; /* 淺綠色背景 */
+    padding: 20px; /* 內邊距 */
+    border-radius: 10px; /* 邊角圓滑 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+    display: inline-block; /* 讓容器根據內容自動調整大小 */
+    min-width: 400px; /* 設定最小寬度，根據需要調整 */
+} 
+
+.cart-section {
+    /* 這裡可以根據需求調整，例如加上透明度 */
+    background-color: #ffffff; /* 購物車內容背景 */
+    padding: 10px; /* 內邊距 */
+    border-radius: 5px; /* 邊角圓滑 */
+}
+.productContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 設定為兩欄，欄寬均分 */
+    gap: 20px; /* 欄之間的間距 */
+    padding: 10px;
+}
+.product {
+    margin-bottom: 15px; /* 讓每個產品之間有間隔 */
+    border: 1px solid #ccc; /* 增加邊框以區分產品 */
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    background-color: #ffffff; /* 背景顏色 */
+}
+.product img {
+    width: 200px; /* 設定固定寬度 */
+    height: 200px; /* 設定固定高度 */
+    object-fit: cover; /* 保持圖像比例，裁剪超出部分 */
+    border-radius: 8px; /* 可以加上圓角 */
+}
+
+button {
+    background-color: #4CAF50; /* 綠色 */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+button:hover {
+    background-color: #45a049; /* 懸停變色 */
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .productContainer, .cart-container {
+        width: 100%;
+    }
+}
