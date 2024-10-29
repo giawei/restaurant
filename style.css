@@ -108,7 +108,9 @@ button:hover {
         padding: 0 10px; /* 添加左右內邊距，避免接觸邊界 */
         grid-template-columns: 1fr; /* 單列 */
     }
-    
+    .product{
+        width: 90%;
+    }
     .main-container {
         flex-direction: column; /* 垂直排列 */
     }
