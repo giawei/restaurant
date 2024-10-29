@@ -140,4 +140,7 @@ button:hover {
     .site-name {
         font-size: 18px; /* 更小螢幕上減小字體大小 */
     }
+    .product{
+        width: 70%;
+    }
 }
